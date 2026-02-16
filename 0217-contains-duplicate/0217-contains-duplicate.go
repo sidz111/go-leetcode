@@ -1,5 +1,5 @@
 func containsDuplicate(nums []int) bool {
-    m := make(map[int]int)
+    m := make(map[int]int, len(nums))
     for i:=0; i<len(nums); i++{
         m[nums[i]]++;
         if m[nums[i]]>1{
