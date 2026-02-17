@@ -8,20 +8,19 @@ func lengthOfLastWord(s string) int {
     //     count ++
     // }
     // return count
+     i := len(s) - 1
 
-
-    end := len(s) - 1
-
-    // skip trailing spaces
-    for end >= 0 && s[end] == ' ' {
-        end--
+    // 1. skip trailing spaces
+    for i >= 0 && s[i] == ' ' {
+        i--
     }
 
-    // find last space
-    start := end
-    for start >= 0 && s[start] != ' ' {
-        start--
+    // 2. count last word length
+    length := 0
+    for i >= 0 && s[i] != ' ' {
+        length++
+        i--
     }
 
-    return end - start
+    return length
 }
