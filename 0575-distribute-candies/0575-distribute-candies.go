@@ -4,8 +4,8 @@ func distributeCandies(candyType []int) int {
         uniqueCandies[candy] = true
     }
 
-    maxTypes := len(uniqueCandies)
-    allowedToEat := len(candyType) / 2
+    //maxTypes := len(uniqueCandies)
+    // allowedToEat := len(candyType) / 2
 
-    return int(math.Min(float64(maxTypes), float64(allowedToEat)))
+    return int(math.Min(float64(len(uniqueCandies)), float64(len(candyType) / 2)))
 }
