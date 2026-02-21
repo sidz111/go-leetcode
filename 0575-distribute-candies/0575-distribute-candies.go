@@ -1,13 +1,11 @@
 func distributeCandies(candyType []int) int {
-    limit := len(candyType) / 2
-    unique := make(map[int]struct{})
-
-    for _, c := range candyType {
-        unique[c] = struct{}{}
-
-        if len(unique) == limit {
-            return limit
-        }
+    uniqueCandies := make(map[int]bool)
+    for _, candy := range candyType {
+        uniqueCandies[candy] = true
     }
-    return len(unique)
+
+    maxTypes := len(uniqueCandies)
+    allowedToEat := len(candyType) / 2
+
+    return int(math.Min(float64(maxTypes), float64(allowedToEat)))
 }
