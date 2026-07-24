@@ -1,14 +1,15 @@
 func firstPalindrome(words []string) string {
     for _, s := range words {
-		j := 0
+		isPalindrome := true
 
-		for ; j < len(s)/2; j++ {
+		for j := 0; j < len(s)/2; j++ {
 			if s[j] != s[len(s)-1-j] {
+				isPalindrome = false
 				break
 			}
 		}
 
-		if j == len(s)/2 {
+		if isPalindrome {
 			return s
 		}
 	}
