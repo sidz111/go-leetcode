@@ -29,4 +29,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2108-find-first-palindromic-string-in-the-array](https://github.com/sidz111/go-leetcode/tree/main/2108-find-first-palindromic-string-in-the-array/) | Easy |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0009-palindrome-number](https://github.com/sidz111/go-leetcode/tree/main/0009-palindrome-number/) | Easy |
 <!---LeetCode Topics End-->
